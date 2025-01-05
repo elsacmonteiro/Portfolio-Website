@@ -1,0 +1,220 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Dark background */
+    color: #fff; /* White text */
+    line-height: 1.6;
+  }
+  
+  /* Navbar styles */
+  #navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #1f1f1f; /* Darker background for the navbar */
+    padding: 10px 0;
+    z-index: 1000;
+  }
+  
+  #navbar nav {
+    display: flex;
+    justify-content: center;
+  }
+  
+  #navbar .nav-link {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-weight: 700; /* Bold font */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Poppins', sans-serif;
+    transition: color 0.3s ease;
+  }
+  
+  #navbar .nav-link:hover {
+    color: #9b59b6;
+  }
+  
+  /* Welcome section */
+  #welcome-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background-image: url('https://images.unsplash.com/photo-1567359781514-3b964e2b04d6?q=80&w=2160&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    color: white;
+  }
+  
+  #welcome-section h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+    color: #fff;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0;
+    z-index: 1;
+  }
+  
+  /* About section */
+  #about {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #444;
+  }
+  
+  #about h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  #about p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    line-height: 1.8;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Projects section */
+  #projects {
+    padding: 50px 20px;
+    background-color: #555;
+    text-align: center;
+  }
+  
+  #projects h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  
+  .project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .project-tile {
+    background-color: #1f1f1f;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    transition: transform 0.3s ease;
+  }
+  
+  .project-tile:hover {
+    transform: scale(1.05);
+  }
+  
+  .project-tile h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .project-tile p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  
+  .project-tile a {
+    color: #9b59b6;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+  
+  .project-tile a:hover {
+    color: #fff;
+  }
+  
+  /* Contact section */
+  #contact {
+    padding: 50px 20px;
+    background-color: #333;
+    text-align: center;
+  }
+  
+  #contact h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  #contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  #contact form input, #contact form textarea {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: #222;
+    border: 1px solid #555;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 5px;
+  }
+  
+  #contact form input[type="submit"] {
+    width: 50%;
+    background-color: #9b59b6;
+    border: none;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  #contact form input[type="submit"]:hover {
+    background-color: #8e44ad; 
+    transform: scale(1.05); 
+  }
+  
+  #contact p {
+    margin-top: 20px;
+    font-size: 1rem;
+  }
+  
+  /* Media Queries for smaller screens */
+  @media (max-width: 768px) {
+    #navbar nav {
+      flex-direction: column;
+    }
+  
+    #welcome-section h1 {
+      font-size: 2.5rem;
+    }
+  
+    #about p {
+      font-size: 1rem;
+    }
+  
+    .project-container {
+      flex-direction: column;
+    }
+  
+    .project-tile {
+      width: 80%;
+    }
+  
+    #contact form input, #contact form textarea {
+      width: 90%;
+    }
+  
+    #contact form input[type="submit"] {
+      width: 60%;
+    }
+  }
