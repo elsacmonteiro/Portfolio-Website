@@ -1,3 +1,16 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  opacity: 0;
+  transition: opacity 0.8s ease-in;
+}
+
+body.loaded {
+  opacity: 1;
+}
+
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
