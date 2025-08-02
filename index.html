@@ -64,5 +64,46 @@
     </form>
     <p>You can also find me on <a href="https://github.com/elsacmonteiro" target="_blank">GitHub</a>.</p>
   </section>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+
+  window.addEventListener('load', () => {
+    document.body.classList.add('loaded');
+  });
+
+  const form = document.getElementById('contact-form');
+
+  form.addEventListener('submit', function (e) {
+    const name = form.name.value.trim();
+    const email = form.email.value.trim();
+    const phone = form.phone.value.trim();
+    const message = form.message.value.trim();
+
+    if (name.length < 3) {
+      alert('O nome deve ter pelo menos 3 caracteres.');
+      e.preventDefault();
+      return;
+    }
+
+    if (!/^[\w.-]+@[a-zA-Z\d.-]+\.[a-zA-Z]{2,}$/.test(email)) {
+      alert('Por favor insere um email válido.');
+      e.preventDefault();
+      return;
+    }
+
+    if (!/^\d{9,15}$/.test(phone.replace(/\s/g, ''))) {
+      alert('O número de telefone deve conter apenas dígitos e ter entre 9 a 15 números.');
+      e.preventDefault();
+      return;
+    }
+
+    if (message.length < 10) {
+      alert('A mensagem deve ter pelo menos 10 caracteres.');
+      e.preventDefault();
+      return;
+    }
+  });
+</script>
 </body>
 </html>
